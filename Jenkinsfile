@@ -11,13 +11,13 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                bat 'docker build -t money-tracker:v1 .'
+                bat 'docker build -t money-tracking:v1 .'
             }
         }
 
         stage('Run Docker Container') {
             steps {
-                bat 'docker run --rm money-tracker:v1'
+                bat 'docker run --rm money-tracking:v1'
             }
         }
     }
