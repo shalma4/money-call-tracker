@@ -10,7 +10,7 @@ pipeline {
 
         stage('Run Python Program') {
             steps {
-                bat 'C:\Users\prima\AppData\Local\Programs\Python\Python313\python.exe calculate.py'
+                bat '"C:\\Users\\prima\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" calculate.py'
             }
         }
     }
