@@ -8,4 +8,6 @@ print("money_per_call=", money_per_call)
 
 print("total_cost=", total_cost)
 
+print("Hello")
+
 
