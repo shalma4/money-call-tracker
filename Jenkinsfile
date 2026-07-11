@@ -2,15 +2,22 @@ pipeline {
     agent any
 
     stages {
+
         stage('Checkout') {
             steps {
-                echo 'Checking out code...'
+                echo 'Code downloaded from GitHub'
             }
         }
 
-        stage('Run Python Program') {
+        stage('Build Docker Image') {
             steps {
-                bat '"C:\\Users\\prima\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" calculate.py'
+                bat 'docker build -t money-tracker:v1 .'
+            }
+        }
+
+        stage('Run Docker Container') {
+            steps {
+                bat 'docker run --rm money-tracker:v1'
             }
         }
     }
