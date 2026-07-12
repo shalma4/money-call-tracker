@@ -20,6 +20,11 @@ pipeline {
                 bat 'docker run --rm money-tracking:v1'
             }
         }
+        stage('Deploy to Kubernetes') {
+    steps {
+        bat 'kubectl apply -f deployment.yaml'
+    }
+}
     }
 
     post {
