@@ -8,4 +8,4 @@ spec:
   containers:
   - name: money-tracker
     image: money-tracking:v1
-    imagePullPolicy: Never
+    imagePullPolicy: always
