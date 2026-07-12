@@ -19,5 +19,5 @@ spec:
     spec:
       containers:
       - name: money-tracker
-        image: YOUR_DOCKERHUB_USERNAME/money-tracking:v1
+        image: shalmadsouza/money-tracking:v1
         imagePullPolicy: Always
