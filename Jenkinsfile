@@ -22,8 +22,24 @@ pipeline {
         }
         stage('Debug') {
     steps {
-        bat 'type C:\\Users\\prima\\.kube\\config'
+        bat '''
+        echo Current User:
+        whoami
+
+        echo.
+        echo Kube Config:
+        type C:\\Users\\prima\\.kube\\config
+
+        echo.
+        echo Current Context:
+        kubectl config current-context
+
+        echo.
+        echo Nodes:
+        kubectl get nodes
+        '''
     }
+}
 }
         stage('Deploy to Kubernetes') {
     steps {
